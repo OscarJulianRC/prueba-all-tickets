@@ -1,0 +1,16 @@
+.tituloEventos {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #0F2335;
+}
+
+.lineaNaranja {
+    height: 2px;
+    color: #ED701C;
+    background-color: #ED701C;
+    width: 205px;
+    margin: 0 auto;
+    margin-top: -4px;
+}

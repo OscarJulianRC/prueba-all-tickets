@@ -1,0 +1,62 @@
+.filters {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  height: 20px;
+  width: 20px;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 12px 10px 44px; /* espacio para la lupa */
+  height: 42px;
+  font-size: 1rem;
+  font-style: italic;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  height: 42px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f57c00;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #e65100;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #f57c00; /* Naranja */
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

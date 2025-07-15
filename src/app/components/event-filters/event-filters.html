@@ -1,0 +1,7 @@
+<div class="filters">
+    <img src="assets/lupa.png" alt="Buscar" class="search-icon" />
+    <input [(ngModel)]="keyword" type="text" placeholder="Buscar por nombre/artista" class="search-input" />
+    <button (click)="onSearch()" class="search-btn">Buscar</button>
+
+    <div class="spinner" *ngIf="loading"></div>
+</div>

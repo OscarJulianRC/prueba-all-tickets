@@ -1,0 +1,10 @@
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px; /* aumenta el espacio entre tarjetas */
+  padding: 2rem 3rem;
+  width: 100%;
+  max-width: 1440px; /* evita que las tarjetas se estiren demasiado en pantallas ultra anchas */
+  margin: 0 auto; /* centra el grid */
+  box-sizing: border-box;
+}

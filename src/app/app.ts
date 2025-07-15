@@ -1,12 +1,27 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Navbar } from './components/navbar/navbar';
+import { Carousel } from './components/carousel/carousel';
+import { EventFilters } from './components/event-filters/event-filters';
+import { EventList } from './components/event-list/event-list';
+import { FormsModule } from '@angular/forms'; // para [(ngModel)]
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+  imports: [
+    Navbar,
+    Carousel,
+    EventFilters,
+    EventList,
+    FormsModule
+  ]
 })
 export class App {
-  protected title = 'all-tickets-prueba';
+  searchTerm: string = '';
+
+  onSearch(term: string) {
+    this.searchTerm = term;
+  }
 }

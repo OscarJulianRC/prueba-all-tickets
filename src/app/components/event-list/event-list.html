@@ -1,0 +1,5 @@
+<div *ngIf="loading">Cargando eventos...</div>
+
+<div class="event-grid" *ngIf="!loading">
+  <app-event-card *ngFor="let event of filtered" [event]="event"></app-event-card>
+</div>

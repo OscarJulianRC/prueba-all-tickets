@@ -1,0 +1,15 @@
+<div class="card col-26 col-sm-6 col-md-6 pl-sm-5 pr-sm-5 pl-md-2 pr-md-2 col-lg-4 col-xl-3">
+  <img [src]="event.image" alt="{{ event.title }}" class="card-image" />
+
+  <div class="card-body">
+    <h3 class="card-title">{{ event.title }}</h3>
+
+    <div class="card-info">
+      <p><span class="emoji">📅</span> {{ event.date | date: 'EEE d \'de\' MMM \'de\' y' }}</p>
+      <p><span class="emoji">🕒</span> {{ event.time || 'Por confirmar' }}</p>
+      <p><span class="emoji">📍</span> {{ event.location || 'Ubicación no disponible' }}</p>
+    </div>
+
+    <button class="info-button">Info.</button>
+  </div>
+</div>

@@ -1,6 +1,15 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
 import { App } from './app/app';
+import { provideRouter } from '@angular/router';
+import 'bootstrap'; // Asegúrate de que bootstrap esté importado si es necesario
 
-bootstrapApplication(App, appConfig)
-  .catch((err) => console.error(err));
+// Importa directamente tus componentes standalone si tienen dependencias
+import { importProvidersFrom } from '@angular/core';
+import { provideHttpClient } from '@angular/common/http';
+
+bootstrapApplication(App, {
+  providers: [
+    provideRouter([]),
+    provideHttpClient()
+  ]
+}).catch(err => console.error(err));
